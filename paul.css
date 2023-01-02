@@ -1,0 +1,488 @@
+*{
+	
+}
+
+body{
+	background-color: #f5e7d4;
+}
+
+@font-face {
+  font-family: "NexaBold";
+  src: url("./Nexa Bold.ttf")
+}
+
+@font-face {
+  font-family: "Camar";
+  src: url("Camar.otf")
+}
+
+
+@font-face {
+  font-family: "Pilowlava";
+  src: url("Pilowlava-Regular.otf")
+}
+@font-face {
+  font-family: "dumpling";
+  src: url("DTDumplingDisplay-Regular.otf")
+}
+@font-face {
+  font-family: "type_fesse";
+  src: url("Typefesse_Claire-Obscure.otf")
+}
+
+
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50%{transform: translateY(10%);}
+  100%{transform: translateY(0%);}
+}
+
+
+
+
+
+/* ---------------- presentation page ---------------------*/
+		/* ------------ header ------------*/
+
+.header{
+	top: 0;
+	left: 0;
+	position: relative;
+	background-color: #4e9cd7;
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+
+.texture{
+	pointer-events: none;
+	transition: 0.5;
+	z-index: -1;
+	mix-blend-mode: difference;
+	top: 0;
+	left: 0;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+}
+
+.oeil_container{
+
+	position: relative;
+	margin: 0.5%;
+	height: 80%;
+}
+
+#eye:after { /*pupil*/
+	transform-origin: 70% 50%;
+  position: absolute;
+  bottom: 30%;
+  right: 40%;
+  width: 2.5vh;
+  height: 2.5vh;
+  background: #000;
+  border-radius: 50%;
+  content: "";
+  transform: translateY(30px);
+}
+
+.picto_move{
+	margin: 0.5%;
+	height: 100%;
+}
+
+.date{
+	text-align: left;
+	width: fit-content;
+	font-family: Nexabold;
+	font-size: 3vw;
+	
+}
+
+
+/*------------ contenu ----------- */
+
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10vh;
+}
+
+.img_containt{
+	width: 60%;
+}
+
+.titre{
+	margin-top: 3vh;
+	text-align: left;
+	width: fit-content;
+	font-family: Camar;
+	font-size: 5vw;
+}
+
+.seconde_layer{
+	position: relative;
+
+}
+.forme1{
+	z-index: -1;
+	position: absolute;
+	width: 12vw;
+	top: 35vh;
+	right: 32vw;
+}
+.forme2{
+	z-index: -1;
+	position: absolute;
+	width: 18vw;
+	bottom: 10vh;
+	right: 10vw;
+}
+.forme3{
+	z-index: -1;
+	position: absolute;
+	width: 9vw;
+	top: 23vh;
+	transform: rotateZ(160deg);
+}
+.forme4{
+	z-index: -1;
+	position: absolute;
+	width: 11vw;
+	top: 23vh;
+}
+.forme5{
+	z-index: -1;
+	position: absolute;
+	width: 13vw;
+	top: 23vh;
+}
+
+.container .forme3{
+		left: 29vw;
+}
+
+
+
+/*----------- transition ------------- */
+
+.area{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.move_image{
+	transition: 0.5s;
+	filter: saturate(0);
+	width: 50%;
+}
+
+.invisible_transition{
+	height: 100vh;
+}
+
+/* ---------------- program page ------------- */
+.program_page{
+	z-index: -1;
+	opacity: 0;
+	background-color: black;
+}
+
+.perf .container_programme{
+	flex-direction: column;
+}
+
+.column{
+	flex-direction: column;
+}
+
+.name_header{
+	margin-top: 10%;
+	font-family: Camar;
+	font-size: 2em;
+	color: #acca44;
+	font-weight: lighter;
+}
+
+.titre_programme{
+	width: 80%;
+	font-size: 3em;
+}
+.auteur{
+	text-transform: uppercase;
+	font-family: NexaBold;
+	font-weight: lighter;
+	font-size: 1vw;
+}
+.info_complementaire{
+	text-transform: uppercase;
+	font-family: NexaBold, sans-serif;
+	font-size: 1vw;
+	letter-spacing: 15px;
+	font-weight: initial;
+}
+
+
+.rigth{
+	position: absolute;
+	top: 55%;
+	right: 15%;
+}
+.top{
+	position: absolute;
+	top: 25%;
+	right: 40%;
+}
+.left{
+	position: absolute;
+	top: 55%;
+	left: 15%;
+}
+.center{
+	position: absolute;
+	top: 45%;
+	right: 40%;
+}
+
+.pilo{
+	font-family: Pilowlava;
+}
+.dumpling{
+	 font-family: dumpling;
+}
+.type_fesse{
+	font-family: type_fesse;
+}
+
+/* ---------------------- end programme page ----------------------- */
+
+/*header*/
+.header_full{
+	display: none;
+}
+/*header*/
+
+/*----------- pass --------- */
+
+.reserve_page{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+.reserve_titre{
+	font-family: NexaBold;
+	font-weight: lighter;
+	color: white;
+	font-size: 2vw;
+}
+.reserve{
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pass{
+	position: relative;
+	margin: 30px;
+	height: 50vh;
+	width: 15vw;
+
+	font-size: 4em;
+	text-align: center;
+	font-family: Camar;
+	font-weight: lighter;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.pass h5{
+	height: 60px;
+	width: 60px;
+	border-radius: 50px;
+	background-color: white;
+	color: black;
+}
+
+.titre_pass{
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-origin: 50% 50%;
+	background-position: center;
+}
+
+.pass_forme{
+	z-index: -1;
+	position: absolute;
+	height: 50%;
+	width: 70%;
+
+	top: 10%;
+	left: 20%;
+}
+
+.btn_acheter{
+	padding: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #4e9cd7;
+	border-radius: 50px;
+
+	font-family: Camar;
+	font-size: 1vw;
+	font-weight: inherit;
+	letter-spacing: 0.1vw;
+}
+
+.pass:hover{
+	transition: 1s;
+	transform: scale(1.2);
+}
+
+.titre_pass:hover{
+		transition: 1s;
+	transform: scale(1.1);
+}
+
+.btn_acheter:hover{
+			transition: 0.8s;
+	transform: scale(1.2);
+}
+
+
+/*-------- ending page ----------*/
+.bar{
+	display: none;
+}
+
+.dowloadAndContact_page{
+	background-image: url("./imagePaul/fond.png");
+}
+
+
+
+
+
+.container_brochure{
+	z-index: 3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("./imagePaul/forme6.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+.contact{
+	height: 60%;
+	font-size: 1.5vw;
+}
+
+.contact_contenu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.insta{
+	margin: 10px;
+}
+
+.phone{
+	text-align: center;
+	width: fit-content;
+	
+}
+
+.res{
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+}
+
+.brochure{
+	text-align: center;
+	width: 300px;
+}
+
+.brochure a{
+	color: black;
+	font-family: Camar;
+	text-decoration: none;
+	font-size: 2vw;
+}
+
+.footer{
+	width: 100%;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.contact{
+
+	font-family: NexaBold;
+
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+
+
+/*-- scroll --*/
+.scroll_img{
+	animation-name: move;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+  position: absolute;
+  top: 48%;
+  right: 10%;
+
+  height: 10vh;
+  width: 5vw;
+}
+
+.reseau_img{
+	width: fit-content;
+}
+
+.remove{
+	display: none;
+}

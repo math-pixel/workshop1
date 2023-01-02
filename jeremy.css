@@ -1,0 +1,461 @@
+@keyframes square_open {
+  0% { clip-path: polygon(0% 0%, 0% 0%, 0% 100%,0% 100%); }
+  100% { clip-path: polygon(0% 0%, 100% 0%, 100% 100%,0% 100%); }
+}
+
+@keyframes square_out {
+  0% { clip-path:  polygon(0% 0%, 100% 0%, 100% 100%,0% 100%);}
+  100% { clip-path: polygon(100% 0%, 100% 0%, 100% 100%,100% 100%); }
+}
+
+@keyframes glow{
+	0%{}
+	100%{}
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(110%);
+  }
+  100%{transform: translateY(-110%);}
+}
+
+@font-face {
+  font-family: "aukera";
+  src: url("aukera.otf")
+}
+
+@font-face {
+  font-family: "bogam";
+  src: url("Bogam.otf")
+}
+
+@font-face{
+	font-family: "cafe";
+	src: url("Louis George Cafe.ttf")
+}
+
+
+*{
+	color: #ec6350;
+	font-weight: lighter;
+}
+
+
+/*remove uselessclass*/
+.texture{
+	display: none;
+}
+.presentation_page{
+	display: none;
+}
+.news_page{
+	display: none;
+}
+
+
+/* ----------- home / transition ----------*/
+.transition_page{
+	background-color: #275b64;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.area{
+	position: relative;
+	width: 28%;
+	height: 48%;
+}
+
+
+.move_image{
+	clip-path: polygon(0% 0%, 0% 0%, 0% 100%,0% 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+	/*animation*/
+.titre_jeremy_div{
+	clip-path:  polygon(0% 0%, 100% 0%, 100% 100%,0% 100%);
+	position: absolute;
+	top: 30%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content:  flex-start;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	line-height: 80px;
+}
+.titre_jeremy{
+	letter-spacing: 10px;
+	font-family: "bogam";
+	font-size: 5vw;
+	color: white;
+
+}
+.sous_titre{
+	text-align: right;
+	letter-spacing: 30px;
+	padding-left: 15px;
+	font-family: "aukera";
+	font-size: 1vw;
+	margin-bottom: 8px;
+	color: white;
+}
+
+.square_open{
+	animation-delay: 4.5s;
+	animation-name: square_open;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.square_out{
+	animation-delay: 4s;
+	animation-name: square_out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.glow{
+	animation-delay: 4.8s;
+	animation-name: glow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.progresse_bar {
+	height: 10px;
+  width: 50%;
+  border-radius: 50px;
+  border: solid 1px white;
+}
+  
+.progression {
+  width: 2%;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+
+
+/*----------- programme page ---------- */
+
+.forme1{
+	display: none;
+}
+.forme2{
+	display: none;
+}
+.forme3{
+	display: none;
+}
+.forme4{
+	display: none;
+}
+.forme5{
+	display: none;
+}
+
+
+.program_page{
+	background-color: #ecf7fe;
+	opacity: 0;
+}
+.name_header{
+	margin-top: 10%;
+	font-family: bogam;
+	font-size: 3em;
+	border: solid 5px #ec6350 ;
+	padding: 200px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+}
+.titre_programme{
+	width: 80%;
+	font-family: bogam;
+	font-size: 3em;
+
+}
+.auteur{
+	font-family: bogam;
+	width: 60%;
+	font-size: 2em
+}
+.info_complementaire{
+	font-family: cafe, sans-serif;
+	font-size: 2em;
+	font-weight: lighter;
+}
+
+
+
+
+/*-------------------- header ----------------*/
+.header_full{
+	opacity: 0;
+	z-index: 500;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #ecf7fe;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.robot{
+	margin-left: 2%;
+	position: relative;
+	height: 80%;
+	width: auto;
+}
+.logo_we{
+	position: relative;
+	height: 80%;
+	width: auto;
+}
+.none{
+	visibility: hidden;
+}
+/* ------------- end program page -------------- */
+
+.reserve_page{
+	font-family: bogam;
+	z-index: -0;
+	position: relative;
+	background-color: #ecf7fe;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.reserve{
+	width: 80%;
+	height: 80%;
+	background-color: #ec6350;/*rouge*/
+	border-radius: 40px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+
+.row{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.pass{
+	height: 80%;
+	width: 25%;
+	border-radius: 50px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.titre_pass{
+	border-radius: 20px;
+	text-align: center;
+	font-size: 6em;
+	background-color:#ecf7fe ;/*blanc*/
+	padding: 50px;
+}
+
+.nb_pass1{
+
+	font-size: 3em;
+	margin-top: 50px;
+	color: #ecf7fe;
+	border-radius: 10px;
+	border: solid 5px  #ecf7fe;
+	width: 80%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nb_pass2{
+	font-size: 3em;
+	margin-top: 50px;
+	color: #ecf7fe;
+	border-radius: 10px;
+	border: solid 5px  #ecf7fe;
+	width: 80%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nb_pass3{
+	font-size: 3em;
+	margin-top: 50px;
+	color: #ecf7fe;
+	border-radius: 10px;
+	border: solid 5px  #ecf7fe;
+	width: 80%;
+	height: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pass h5{
+	padding: 10px;
+}
+
+
+.btn_acheter{
+	font-size: 3em;
+	border-radius: 20px;
+	color: #ec6350;
+	background-color:#ecf7fe ;
+	padding: 6%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+.reserve_titre{
+	display: none;
+}
+/*------------------ end reserve page ---------*/
+
+/*------------------- dowloadAndContact_page ------------ */
+
+.dowloadAndContact_page{
+	background-color: #ecf7fe;
+}
+/*download*/
+.download_brochure{
+	height: 50%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container_brochure{
+	height: 50%;
+	width: 60%;
+	border-radius: 20px;
+	background-color: #ec6350;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.brochure{
+
+	position: relative;
+	padding: 15%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-radius: 20px;
+	border: 10px solid white;
+	font-size: 50px;
+}
+
+.brochure a{
+	text-decoration: none;
+	color: #ecf7fe;
+	transition: 0.5s;
+	transform: scale(1.0);
+
+	font-family:  Bogam;
+	letter-spacing: 0.1vw;
+}
+
+
+
+
+/*ending*/
+.footer{
+	background-color: #ecf7fe;
+	box-shadow: 0px -5px 15px rgba(0,0,0,0.3);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 40%;
+	width: 100%;
+}
+.bar{
+	height: 40%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo_robot{
+	margin: 100px;
+	height: 60%;
+	width: auto;
+}
+
+.contact{
+	height: 60%;
+
+	font-family: cafe;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.phone{
+	text-align: center;
+	width: 500px;
+	font-size: 2em;
+}
+.reseau{
+	font-size: 2em;
+}
+.res{
+	margin-top: 10px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+}
+
+
+/*-------- scroll fleche --------*/
+.cliping{
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%,0% 100%);
+	position: absolute;
+	transform: scale(-1);
+	top: 50%;
+	right: 10%;
+	height: 10vh;
+  width: 4vw;
+}
+
+.scroll_img{
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 10vh;
+  width: 4vw;
+  transform: translateY(100%);
+  animation-name: move;
+  animation-delay: 4s;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

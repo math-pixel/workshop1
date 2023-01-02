@@ -1,0 +1,57 @@
+~~~ Point commun ~~~
+- div par ( concert, conference, expos )
+	- 1 image, 1 date , 1 type
+-burger menu
+-picto en haut a gauche
+
+-oeil scrollable
+
+~~~ Paul ~~~
+- page intro avec :
+	- Typo farfellu
+	- asset tache multi-plan
+- page news avec :
+	- crossfader presentation
+
+- oeil page + zoom  => TRANSITION
+
+- page de programme
+
+- page reservation
+
+- page contact
+
+~~~ Jeremy ~~~
+- page de creature ?
+
+- page de programme
+
+- page de reservation
+
+- page de download
+
+- page contact
+
+
+~~~ ajouter/modifier ? ~~~
+	
+	############ paul ############
+
+- page de download
+
+- ( preference pour reservation jeremy )
+
+	############ jeremy ##########
+
+- page d'intro
+
+- page de news ?
+
+- ( preference pour contact paul )
+
+
+
+
+#################### Note 
+
+- faire un mix entre les deux page contact

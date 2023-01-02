@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<title>test</title>
+</head>
+<body id="body">
+	
+<div style="
+background-color: red;
+width: 100vw;
+height: 100vh;
+"></div>
+
+
+<div style="
+background-color: blueviolet;
+width: 100vw;
+height: 100vh;
+position: sticky;
+top: 0px;
+z-index: -1;
+" ></div>
+
+<div style="
+background-color: yellow;
+width: 100vw;
+height: 100vh;
+" id="yeye"></div>
+
+<div style="
+background-color: green;
+width: 100vw;
+height: 100vh;
+"></div>
+
+
+<div style="
+
+position: fixed;
+width: 400px;
+height: 200px;
+top: 0;
+">
+	<img src="pokemon.png" id="aaaa" class="ooo">
+	<img src="" id="img2">
+</div>
+
+<section  class="movearea">
+  <div id='container' class="container">
+    <div id='eye' class="eye"></div>
+  </div>
+</section>
+
+
+</body>
+
+<script type="text/javascript">
+	
+	var a = document.getElementById('yey');
+
+	  var img_array = ["frame1.png","frame2.png","frame3.png","frame4.png","frame5.png","frame6.png","frame7.png","frame8.png","frame9.png","frame10.png"];
+	console.log(img_array.length);
+	
+
+
+
+	document.addEventListener('scroll', (e) => {
+		//console.log(window.scrollY);
+		console.log(document.getElementById("yeye").getBoundingClientRect());
+		
+		var max = document.getElementById("yeye").getBoundingClientRect().height/2; //element.scrolltop
+		var min = 0;
+		var max_up = document.getElementById("yeye").getBoundingClientRect().height;
+
+		var pos_actu = -document.getElementById("yeye").getBoundingClientRect().y;
+		//console.log(pos_actu);
+		var dist = max-min;
+		var index = (pos_actu / dist) * img_array.length  ;
+		document.getElementById("aaaa").style.transform = 'scale(1)';
+		if (pos_actu > min && pos_actu < max ) {
+			index = mapp(pos_actu, min,max,0,img_array.length);
+			//console.log(index);
+			document.getElementById("aaaa").src = img_array[Math.round(index)];
+		}
+		if (pos_actu > max) {
+			document.getElementById("aaaa").src = img_array[img_array.length -1];
+			if (pos_actu < max_up) {
+				index = mapp(pos_actu, max,max_up,1,50);
+				console.log("index"+index);
+				document.getElementById("aaaa").style.transform = 'scale('+1 * index+')';
+				document.getElementById("aaaa").style.display = "block"
+			}
+			if (pos_actu > max_up) {
+				document.getElementById("aaaa").style.transform = 'scale(50)';
+				document.getElementById("aaaa").style.display = "none"
+			}
+			
+		}
+		
+
+	});
+
+
+
+  console.log(lastKnownScrollPosition = window.scrollY);
+
+
+
+  function mapp(x,in_min,in_max,out_min,out_max) {
+  		return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+	}
+
+
+
+	document.addEventListener('mousemove', (event) => {
+		  var eye = document.getElementById("eye");
+		  //console.log('eye', eye)
+		  var x = (eye.offsetLeft) + (eye.offsetWidth / 2);
+		  var y = (eye.offsetTop) + (eye.offsetHeight / 2);
+		  var rad = Math.atan2(event.pageX - x, event.pageY - y);
+		  var rot = (rad * (180 / Math.PI) * -1) + 180;
+		  eye.style.transform = "rotate("+ rot + "deg)";
+	});
+
+
+
+
+
+</script>
+
+</html>

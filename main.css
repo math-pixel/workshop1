@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  overflow-x: hidden;
+}
+
+@keyframes fade {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes outfade {
+  from {opacity: 1;} 
+  to {opacity: 0;}
+}
+
+/* ---------------------- slider --------------------- */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.img_slide1{
+  z-index: -2;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 15px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.outfade{
+  animation-name: outfade;
+  animation-duration: 2s;
+}
+
+.Slides{
+  animation-name: fade;
+  animation-duration: 2s;
+  width: 100%;
+  height: 100%;
+}
+
+.Slides h2{
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  background-color: black;
+}
+
+.img_slide1{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------------- pages ------------------------*/
+
+.pages{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*----------- transition ------------- */
+.transition_page{
+  height:100vh;
+  position: sticky;
+  z-index: -5;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*------------------ programme page ----------------- */
+.header_concert{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_programme{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.content_prog{
+  width: 34%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo_switch{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  z-index: 1000;
+  height: 35px;
+  width: 50px;
+}
+
+.brochure{
+  z-index: 2000;
+}
+.brochure:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+
+.cliping{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+
